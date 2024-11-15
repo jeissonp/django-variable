@@ -1,22 +1,37 @@
-Welcome to Lumache's documentation!
-===================================
+.. _installation:
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+Installation
+============
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Requirements
+------------
 
-.. note::
+* Python 2.7, 3.4, 3.5, 3.6 or 3.7
+* Django >= 5
 
-   This project is under active development.
+Pip
+---
 
-Contents
---------
+::
 
-.. toctree::
+    pip install django-variable
 
-   usage
-   api
+Configuration
+-------------
+
+::
+
+    # settings.py
+
+    INSTALLED_APPS = [
+        # ...
+
+        'django_variable',
+    ]
+Django >= 1.10
+
+Afterwards, run::
+
+    python manage.py migrate
+
+All done.

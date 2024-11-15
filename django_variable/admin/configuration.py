@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.variable_config.models.configuration import Configuration
+from django_variable.models.configuration import Configuration
 
 @admin.register(Configuration)
 class ConfigurationAdmin(admin.ModelAdmin):

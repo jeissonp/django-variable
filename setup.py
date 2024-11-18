@@ -8,7 +8,7 @@ setup(
     install_requires=[
         'django>=5',
     ],
-    description='Variable UI',
+    description='Django Variable',
     long_description=open('README.rst').read(),
     long_description_content_type='text/markdown',
     author='Jeisson Perez Molano',

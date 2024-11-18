@@ -34,4 +34,11 @@ Afterwards, run::
 
     python manage.py migrate
 
+
+Administration
+--------------
+
+Go to admin/django_variable/configuration
+
+
 All done.

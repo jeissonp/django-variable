@@ -5,3 +5,4 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "django-variable"
 authors = [{name = "Jeisson Perez M", email = "jeissonp@gmail.com"}]
+version = "0.1.0"

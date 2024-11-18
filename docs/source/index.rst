@@ -28,7 +28,7 @@ Configuration
 
         'django_variable',
     ]
-Django >= 1.10
+Django >= 5
 
 Afterwards, run::
 

@@ -2,7 +2,8 @@ from django.db import models
 
 class Configuration(models.Model):
     key = models.CharField(max_length=100, unique=True)
-    value = models.TextField()
+    value = models.TextField(null=True, blank=True)
+    file = models.FileField(upload_to='configurations', default=None, null=True, blank=True)
     created_at = models.DateTimeField(
         null=False,
         auto_now_add=True

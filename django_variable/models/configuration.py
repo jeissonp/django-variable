@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 class Configuration(models.Model):
     key = models.CharField(max_length=100, unique=True)

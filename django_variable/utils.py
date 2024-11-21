@@ -5,8 +5,8 @@ def get_config(key, default=None):
     try:
         value = cache.get(key)
         if value is None:
-            value = Configuration.objects.get(key=key).value
-            cache.set(key, value)
+            configuration = Configuration.objects.get(key=key)
+            cache.set(key, get_value(configuration))
         return value
 
     except Configuration.DoesNotExist:
@@ -14,6 +14,13 @@ def get_config(key, default=None):
             set_config(key, default)
 
         return default
+
+def get_value(configuration):
+    value = configuration.value
+    if configuration.file:
+        value = configuration.file.url
+
+    return value
 
 def set_config(key, value):
     config, created = Configuration.objects.get_or_create(key=key)
@@ -25,4 +32,4 @@ def set_config(key, value):
 def set_cache_configuration():
     configurations = Configuration.objects.all()
     for configuration in configurations:
-        cache.set(configuration.key, configuration.value)
+        cache.set(configuration.key, get_value(configuration))

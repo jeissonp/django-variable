@@ -22,3 +22,10 @@ and stored in an in-memory cache for later access.
 ## License
 
 MIT
+
+
+## Usage
+
+from django_variable.utils import get_config
+
+get_config('KEY_CONFIG', 'DEFAULT_VALUE')
